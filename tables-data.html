@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tables / Data - UMFELD</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Nov 17 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo umfeld.png" alt="">
+        <span class="d-none d-lg-block">Admin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/pp admin 1.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">A.Verent</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Verent Arnelitha</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="forms-layouts.html">
+              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-editors.html">
+              <i class="bi bi-circle"></i><span>Form Editors</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span>Form Validation</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="tables-data.html" class="active">
+              <i class="bi bi-circle"></i><span>Data Tables</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Data Tables</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Datatables</h5>
+              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add class name to any table you wish to conver to a datatable. Check for <a href="https://fiduswriter.github.io/simple-datatables/demos/" target="_blank">more examples</a>.</p>
+
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th>
+                      <b>Name</b>
+                    </th>
+                    <th>Email.</th>
+                    <th>Username</th>
+                    <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
+                    <th>Password</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Arya fomaus</td>
+                    <td>Arya.fm@user.com</td>
+                    <td>Arya.fms</td>
+                    <td>2020/02/11</td>
+                    <td>Oh oke </td>
+                  </tr>
+                  <tr>
+                    <td>Theodorik Nico</td>
+                    <td>nico@user.com</td>
+                    <td>tr.nco</td>
+                    <td>2021/04/07</td>
+                    <td>trd04</td>
+                  </tr>
+                  <tr>
+                    <td>Virendra Zachery</td>
+                    <td>Zachery@user.com</td>
+                    <td>VRd.ry</td>
+                    <td>2021/09/08</td>
+                    <td>Zachery123</td>
+                  </tr>
+                  <tr>
+                    <td>Abisena Pratama</td>
+                    <td>Abisena pr@user.com</td>
+                    <td>Abi.sena</td>
+                    <td>2022/29/11</td>
+                    <td>Prabisn12</td>
+                  </tr>
+                  <tr>
+                    <td>Bhumantara Dickerson</td>
+                    <td>Dick.tra@user.com</td>
+                    <td>dickn.bmr</td>
+                    <td>2020/11/09</td>
+                    <td>Dick453</td>
+                  </tr>
+                  <tr>
+                    <td>Adhira Qeiza</td>
+                    <td>qei.zaa@user.com</td>
+                    <td>qeiira</td>
+                    <td>2023/03/08</td>
+                    <td>Dhiraaaaa</td>
+                  </tr>
+                  <tr>
+                    <td>Arsyakayla Sagara</td>
+                    <td>Kayarsy@user.com</td>
+                    <td>Key.arsy</td>
+                    <td>2020/23/12</td>
+                    <td>Syaga.3028</td>
+                  </tr>
+                  <tr>
+                    <td>Elnara Azelio</td>
+                    <td>Naraa@user.com</td>
+                    <td>zelopy</td>
+                    <td>2024/31/08</td>
+                    <td>Elzeyz2602</td>
+                  </tr>
+                  <tr>
+                    <td>Arlan Rendika</td>
+                    <td>Rendika@user.com</td>
+                    <td>Ar.kaid</td>
+                    <td>2024/26/08</td>
+                    <td>lanarrr</td>
+                  </tr>
+                  <tr>
+                    <td>Azraf Satya</td>
+                    <td>Satzr@user.com</td>
+                    <td>Zrafya</td>
+                    <td>2023/11/01</td>
+                    <td>Tyazraf</td>
+                  </tr>
+                  <tr>
+                    <td>Agasthya Radeva</td>
+                    <td>Aghty@user.com</td>
+                    <td>Devhya</td>
+                    <td>2022/16/04</td>
+                    <td>ratdv</td>
+                  </tr>
+                  <tr>
+                    <td>Adara Queensha</td>
+                    <td>Queens@user.com</td>
+                    <td>Daraa</td>
+                    <td>2021/26/01</td>
+                    <td>sha2628</td>
+                  </tr>
+                  <tr>
+                    <td>Qiana Larasati</td>
+                    <td>Qisata@user.com</td>
+                    <td>Qiaalar</td>
+                    <td>2019/06/11</td>
+                    <td>Aqniar</td>
+                  </tr>
+                  <tr>
+                    <td>Xena Zenatha</td>
+                    <td>Xena@user.com</td>
+                    <td>xentha</td>
+                    <td>2018/26/10</td>
+                    <td>xenn32</td>
+                  </tr>
+                  <tr>
+                    <td>Azzura Qiara</td>
+                    <td>AzzRa@user.com</td>
+                    <td>Qiaa</td>
+                    <td>2022/06/08</td>
+                    <td>Qiarr147</td>
+                  </tr>
+                  <tr>
+                    <td>evans</td>
+                    <td>evans@user.com</td>
+                    <td>epan ketumbar</td>
+                    <td>2022/04/10</td>
+                    <td>mana tahan</td>
+                  </tr>
+                  <tr>
+                    <td>Dewa Valentino</td>
+                    <td>valn@user.com</td>
+                    <td>Dewaano</td>
+                    <td>2021/18/10</td>
+                    <td>Valt37i</td>
+                  </tr>
+                  <tr>
+                    <td>Emerald Vinchen</td>
+                    <td>Venchen@user.com</td>
+                    <td>rald.vi</td>
+                    <td>2022/08/04</td>
+                    <td>vinch009</td>
+                  </tr>
+                  <tr>
+                    <td>Valden Burch</td>
+                    <td>Burch@user.com</td>
+                    <td>Burchiiild</td>
+                    <td>2024/02/01</td>
+                    <td>Albrn</td>
+                  </tr>
+                  <tr>
+                    <td>Rassell Haynes</td>
+                    <td>rass@user.com</td>
+                    <td>xellys</td>
+                    <td>2023/28/04</td>
+                    <td>SellNes221</td>
+                  </tr>
+                  <tr>
+                    <td>Wafi Ali Haidar</td>
+                    <td>Wafi.sn@user.com</td>
+                    <td>Wafi.sn</td>
+                    <td>2023/18/04</td>
+                    <td>wafi.sn12</td>
+                  </tr>
+                  <tr>
+                    <td>Xavier Anthony</td>
+                    <td>vier5@user.com</td>
+                    <td>ThyVier</td>
+                    <td>2023/21/05</td>
+                    <td>vieranty</td>
+                  </tr>
+                  <tr>
+                    <td>Maddy Rahardja</td>
+                    <td>Maddyrja@user.com</td>
+                    <td>maddyrja</td>
+                    <td>2025/07/01</td>
+                    <td>rja0771</td>
+                  </tr>
+                  <tr>
+                    <td>Rizafa Rahmi</td>
+                    <td>rizafaa@user.com</td>
+                    <td>Rizafaaa</td>
+                    <td>2023/30/05</td>
+                    <td>rizfa26</td>
+                  </tr>
+                  <tr>
+                    <td>Nizi Hajar</td>
+                    <td>me.zii@user.com</td>
+                    <td>Nizii</td>
+                    <td>2023/15/02</td>
+                    <td>zii046</td>
+                  </tr>
+                  <tr>
+                    <td>Nur Lia Hanifah</td>
+                    <td>lianifah@user.com</td>
+                    <td>Hanii</td>
+                    <td>2022/23/12</td>
+                    <td>haninrl</td>
+                  </tr>
+                  <tr>
+                    <td>Annindya Permata </td>
+                    <td>Nindy@user.com</td>
+                    <td>Aninny</td>
+                    <td>2024/23/05</td>
+                    <td>biannn</td>
+                  </tr>
+                  <tr>
+                    <td>Ratna Dila C</td>
+                    <td>RtnDila@user.com</td>
+                    <td>Dian Sastro</td>
+                    <td>2022/12/03</td>
+                    <td>dilla324</td>
+                  </tr>
+                  <tr>
+                    <td>Munifatin Nisa</td>
+                    <td>ninisnisak012@user.com</td>
+                    <td>Ninis Nisak</td>
+                    <td>2022/19/02</td>
+                    <td>ninis012</td>
+                  </tr>
+                  <tr>
+                    <td>Yohan Fikry M</td>
+                    <td>Yohanvky@user.com</td>
+                    <td>Yohan Fvrcy</td>
+                    <td>2022/23/06</td>
+                    <td>Yohan18</td>
+                  </tr>
+                  <tr>
+                    <td>Zena Afindi Langga</td>
+                    <td>Zengga@user.com</td>
+                    <td>Zena A.L.</td>
+                    <td>2023/27/02</td>
+                    <td>Langgaafnd</td>
+                  </tr>
+                  <tr>
+                    <td>Amirul Mukminin</td>
+                    <td>rulll@user.com</td>
+                    <td>rull elektro</td>
+                    <td>2022/03/02</td>
+                    <td>mirull</td>
+                  </tr>
+                  <tr>
+                    <td>Bintang Nawasakti</td>
+                    <td>binwskt@user.com</td>
+                    <td>Bintangg</td>
+                    <td>2022/26/04</td>
+                    <td>Nawasakti543</td>
+                  </tr>
+                  <tr>
+                    <td>Naimah</td>
+                    <td>mahh@user.com</td>
+                    <td>emma chamid</td>
+                    <td>2023/09/02</td>
+                    <td>emmaach</td>
+                  </tr>
+                  <tr>
+                    <td>Anis Wulandari</td>
+                    <td>niseka@user.com </td>
+                    <td>Anis Eka</td>
+                    <td>2021/24/03</td>
+                    <td>wldekaa</td>
+                  </tr>
+                  <tr>
+                    <td>Rachmah Margi</td>
+                    <td>margi@user.com</td>
+                    <td>Rachmahh</td>
+                    <td>2023/26/02</td>
+                    <td>margii23</td>
+                  </tr>
+                  <tr>
+                    <td>Indra Winu</td>
+                    <td>Winu@user.com</td>
+                    <td>Winu.idr</td>
+                    <td>2024/05/01</td>
+                    <td>ndraaa</td>
+                  </tr>
+                  <tr>
+                    <td>Firman Maulana</td>
+                    <td>manln@user.com</td>
+                    <td>Firmann</td>
+                    <td>2022/25/09</td>
+                    <td>firman.msl</td>
+                  </tr>
+                  <tr>
+                    <td>Avril Biller Trizy</td>
+                    <td>trizy@user.com</td>
+                    <td>Avrill</td>
+                    <td>2020/26/06</td>
+                    <td>billerr</td>
+                  </tr>
+                  <tr>
+                    <td>Dibtya Refala C.J</td>
+                    <td>dbtyrcj@usercom</td>
+                    <td>Dibtyaa</td>
+                    <td>2023/31/05</td>
+                    <td>refala3105</td>
+                  </tr>
+                  <tr>
+                    <td>Laila Dwi Fitri</td>
+                    <td>lailadwi@user.com</td>
+                    <td>Lailaa</td>
+                    <td>2023/10/16</td>
+                    <td>pacar aswin</td>
+                  </tr>
+                  <tr>
+                    <td>Kavella Nafiza</td>
+                    <td>vellaa@user.com</td>
+                    <td>Velaaa</td>
+                    <td>2023/05/10</td>
+                    <td>artis smanegama</td>
+                  </tr>
+                  <tr>
+                    <td>Nandatama Luthfilla Arpiva Putra</td>
+                    <td>fillaarp@user.com</td>
+                    <td>Filla A.p</td>
+                    <td>2022/11/05</td>
+                    <td>arpiva23</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Admin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">mee</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
